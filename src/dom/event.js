@@ -843,7 +843,7 @@
     }
 
     event.eventName = eventName;
-    event.memo = memo || { };
+    event.memo = (undefined === memo ? { } : memo);
 
     if (document.createEvent)
       element.dispatchEvent(event);
